@@ -1,0 +1,111 @@
+<!doctype html>
+<html ng-csp ng-app="myoptions">
+<head>
+
+
+    <!-- build:css styles/options_vendor.css -->
+    <link href="bower_components/materialize/dist/css/materialize.css" rel="stylesheet"/>
+    <link href="bower_components/angular/angular-csp.css" rel="stylesheet"/>
+    <link href="bower_components/ngDialog/css/ngDialog.css" rel="stylesheet"/>
+    <link href="bower_components/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet"/>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/options_main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+<body id="options" ng-controller="MyOptionsCtrl as options">
+
+
+<div>
+    <div class="row">
+        <div class="col s3 teal lighten-1 left card-panel white-text">Flowdock Options</div>
+    </div>
+
+    <div ng-show="!!options.showStatus()" class="status-panel" >
+<div class="status card-panel right" >
+    <div ng-show="options.statusMessage">
+        {{options.statusMessage}}
+    </div>
+    <div class="preloader-wrapper big active" ng-show="options.statusThinking">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+        </div><div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+
+<form ng-submit="options.save($event)">
+
+
+    <div class="row">
+
+        <div class="card-panel col s3 teal lighten-1 badge  white-text left ">
+            <i class="mdi-action-settings left"></i>Security
+        </div>
+
+        <div class="col s5 offset-s1">
+                <div class="form-field" >
+                    <div class="label"><label for="api_token">API Token</label></div>
+                    <div class="input" >
+                        <input type="text" ng-model="options.details.apiToken" id="api_token"/>
+                    </div>
+
+                    <!--<div>Name : <input ng-model="repo.name"></div>-->
+                    <!--<div>Name : <input ng-model="repo.name"></div>-->
+
+                </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col offset-s3 s6">
+            <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+                <i class="mdi-content-send right"></i>
+            </button>
+            <a class="btn waves-effect waves-light right" ng-click="options.reset()">Reset
+                <i class="mdi-action-settings-backup-restore right"></i>
+            </a>
+            <a class="btn waves-effect waves-light right" ng-click="options.export()">Export
+                <i class="mdi-action-settings-backup-restore right"></i>
+            </a>
+            <a class="btn waves-effect waves-light right" ng-click="options.import()">Import
+                <i class="mdi-action-settings-backup-restore right"></i>
+            </a>
+        </div>
+    </div>
+
+</form>
+
+</div>
+
+<!-- build:js scripts/options_vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/materialize/bin/materialize.js"></script>
+<script src="bower_components/angular-base64/angular-base64.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/options.js -->
+<script src="bower_components/materialize/dist/js/materialize.js"></script>
+<script src="scripts/chrome.js"></script>
+<script src="scripts/options.js"></script>
+<!-- endbuild -->
+</body>
+</html>

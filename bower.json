@@ -1,0 +1,15 @@
+{
+  "name": "cloudify-build-status-extension",
+  "version": "0.0.0",
+  "dependencies": {
+    "lodash": "~3.9.3",
+    "angular": "~1.4.0",
+    "jquery": "~2.1.4",
+    "materialize": "~0.96.1",
+    "angular-base64": "~2.0.5"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "~1.4.0"
+  }
+}

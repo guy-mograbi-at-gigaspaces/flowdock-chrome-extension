@@ -1,0 +1,19 @@
+
+#options{
+
+    .row{
+        min-height:100px;
+        margin-top:20px;
+    }
+    span.badge{
+        position:relative;
+    }
+
+    .status-panel{
+        position:fixed;
+        right:0;
+        .status{
+            padding-right:60px;
+        }
+    }
+}
