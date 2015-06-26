@@ -1,7 +1,7 @@
-Cloudify Build Chrome Extension
+Flowdock Chrome Extension
 --------------------------------
 
-Notifies you about new pull requests and comments on pull requests
+Notifies you about new notification on flowdock
 
 How to install
 ---------------
@@ -14,12 +14,3 @@ in order to install the plugin you need to do the following:
  - click on `load unpacked extension`
  - click on the extracted directory
 
-
-
-Roadmap
--------
-
- - Expose number of pull requests/comments in badge
- - Display pull requests and their comments in popup
- - support private repositories
- - show notifications on badge 
